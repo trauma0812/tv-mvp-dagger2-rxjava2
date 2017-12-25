@@ -1,5 +1,7 @@
 package jp.co.nino.learning.mainScreen.home;
 
+import android.content.Context;
+
 import java.util.List;
 
 import jp.co.nino.learning.data.api.model.Genre1;
@@ -30,7 +32,7 @@ public interface HomeContract {
 
         void dropView();
 
-        void setParams();
+        void setParams(Context context);
 
         void getTvProgram();
 

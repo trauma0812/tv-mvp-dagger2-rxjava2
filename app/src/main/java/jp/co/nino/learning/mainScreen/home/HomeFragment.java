@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +22,7 @@ import dagger.android.support.DaggerFragment;
 import jp.co.nino.learning.R;
 import jp.co.nino.learning.data.api.model.Genre1;
 import jp.co.nino.learning.mainScreen.ScrollChildSwipeRefreshLayout;
+import jp.co.nino.learning.ui.HomeListAdapter;
 import jp.co.nino.learning.utils.NetworkUtils;
 import jp.co.nino.learning.utils.UIhelper;
 
@@ -28,11 +32,16 @@ import jp.co.nino.learning.utils.UIhelper;
 
 public class HomeFragment extends DaggerFragment implements HomeContract.View{
 
+    private static RecyclerView.Adapter adapter;
+
     @BindView(R.id.refresh_layout)
     ScrollChildSwipeRefreshLayout swipeRefreshLayout;
 
     @BindView(R.id.home_content)
     TextView content;
+
+    @BindView(R.id.recycler_view)
+    RecyclerView recyclerView;
 
     @Inject
     HomeContract.Presenter mPresenter;
@@ -54,6 +63,8 @@ public class HomeFragment extends DaggerFragment implements HomeContract.View{
         View root = inflater.inflate(R.layout.home_frag, container, false);
         ButterKnife.bind(this, root);
 
+        // Set the scrolling view in the custom SwipeRefreshLayout.
+        swipeRefreshLayout.setScrollUpChild(recyclerView);
         // Set up progress indicator
         swipeRefreshLayout.setColorSchemeColors(
                 ContextCompat.getColor(getActivity(), R.color.colorYellow),
@@ -74,7 +85,7 @@ public class HomeFragment extends DaggerFragment implements HomeContract.View{
 
     private void getContents() {
         if (NetworkUtils.isNetworkConnected(getContext())) {
-            mPresenter.setParams();
+            mPresenter.setParams(getContext());
             mPresenter.getTvProgram();
         }
     }
@@ -108,7 +119,12 @@ public class HomeFragment extends DaggerFragment implements HomeContract.View{
 
     @Override
     public void setMainContent(List<Genre1> genre1s) {
-        content.setText(genre1s.toString());
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        adapter = new HomeListAdapter(genre1s);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override

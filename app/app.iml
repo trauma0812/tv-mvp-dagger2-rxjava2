@@ -116,7 +116,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/build-info" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
@@ -126,12 +125,10 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/splits-support" />
@@ -145,32 +142,28 @@
     <orderEntry type="jdk" jdkName="Android API 26 Platform (1)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:exposed-instrumentation-api-publish-0.5" level="project" />
-    <orderEntry type="library" name="com.android.support:support-media-compat-26.1.0" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-appcompat-v7:0.10.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:recyclerview-v7-26.1.0" level="project" />
     <orderEntry type="library" name="com.squareup.retrofit2:converter-jackson:2.0.0@jar" level="project" />
-    <orderEntry type="library" name="android.arch.lifecycle:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-vector-drawable-26.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
-    <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.0" level="project" />
-    <orderEntry type="library" name="com.android.support:appcompat-v7-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-fragment-26.0.2" level="project" />
     <orderEntry type="library" name="org.apache.httpcomponents:httpclient:4.0.1@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-commons:0.10.0@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-core-utils-26.0.2" level="project" />
     <orderEntry type="library" name="com.squareup.retrofit2:adapter-rxjava2:2.3.0@jar" level="project" />
     <orderEntry type="library" name="org.reactivestreams:reactive-streams:1.0.1@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-core-ui-26.1.0" level="project" />
     <orderEntry type="library" name="commons-codec:commons-codec:1.3@jar" level="project" />
     <orderEntry type="library" name="commons-logging:commons-logging:1.1.1@jar" level="project" />
     <orderEntry type="library" name="org.apache.httpcomponents:httpcore:4.0.1@jar" level="project" />
     <orderEntry type="library" name="io.reactivex.rxjava2:rxjava:2.1.7@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.kotlinx:kotlinx-coroutines-core:0.13@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="org.hamcrest:hamcrest-core:1.3@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-compat-26.1.0" level="project" />
     <orderEntry type="library" name="com.squareup.okhttp3:okhttp:3.8.0@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-core-2.2.2" level="project" />
     <orderEntry type="library" name="com.squareup.retrofit2:adapter-rxjava:2.3.0@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-v4-26.0.2" level="project" />
     <orderEntry type="library" name="com.google.dagger:dagger-android-2.11" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:rules-0.5" level="project" />
-    <orderEntry type="library" name="android.arch.core:common:1.0.0@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-sdk25:0.10.0@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.0@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="org.hamcrest:hamcrest-integration:1.3@jar" level="project" />
@@ -178,31 +171,33 @@
     <orderEntry type="library" name="com.google.dagger:dagger-android-support-2.11" level="project" />
     <orderEntry type="library" name="com.google.code.findbugs:jsr305:1.3.9@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-idling-resource-2.2.2" level="project" />
+    <orderEntry type="library" name="com.android.support:animated-vector-drawable-26.0.2" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-sqlite:0.10.0@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="javax.annotation:javax.annotation-api:1.2@jar" level="project" />
     <orderEntry type="library" name="io.reactivex:rxjava:1.3.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:transition-26.1.0" level="project" />
-    <orderEntry type="library" name="com.android.support:design-26.1.0" level="project" />
     <orderEntry type="library" name="com.google.android:android:2.3.1@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:cardview-v7-26.0.2" level="project" />
     <orderEntry type="library" name="org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.60@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:recyclerview-v7-26.0.2" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-core:2.7.2@jar" level="project" />
     <orderEntry type="library" name="xpp3:xpp3:1.1.4c@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-media-compat-26.0.2" level="project" />
     <orderEntry type="library" name="com.android.support:support-annotations:27.0.2@jar" level="project" />
     <orderEntry type="library" name="org.glassfish:javax.annotation:10.0-b28@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" name="com.jaredrummler:material-spinner-1.2.4" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-sdk25-coroutines:0.10.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-fragment-26.1.0" level="project" />
     <orderEntry type="library" name="javax.inject:javax.inject:1@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:appcompat-v7-26.0.2" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-coroutines:0.10.0@jar" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-annotations:2.7.0@jar" level="project" />
     <orderEntry type="library" name="com.squareup.retrofit2:converter-gson:2.0.0-beta3@jar" level="project" />
     <orderEntry type="library" name="com.google.dagger:dagger:2.11@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:support-core-utils-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-core-ui-26.0.2" level="project" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.7@jar" level="project" />
     <orderEntry type="library" name="com.squareup.okio:okio:1.13.0@jar" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.7.2@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-compat-26.0.2" level="project" />
     <orderEntry type="library" name="xerces:xmlParserAPIs:2.6.2@jar" level="project" />
     <orderEntry type="library" name="com.squareup.retrofit2:retrofit:2.3.0@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-support-v4:0.10.0@jar" level="project" />
@@ -212,12 +207,12 @@
     <orderEntry type="library" name="org.jetbrains.anko:anko-appcompat-v7-commons:0.10.0@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="org.hamcrest:hamcrest-library:1.3@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:runner-0.5" level="project" />
-    <orderEntry type="library" name="com.android.support:support-v4-26.1.0" level="project" />
     <orderEntry type="library" name="org.json:json:20080701@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains:annotations:13.0@jar" level="project" />
-    <orderEntry type="library" name="com.android.support:animated-vector-drawable-26.1.0" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko-support-v4-commons:0.10.0@jar" level="project" />
     <orderEntry type="library" name="org.khronos:opengl-api:gl1.1-android-2.1_r1@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:transition-26.0.2" level="project" />
+    <orderEntry type="library" name="com.android.support:design-26.0.2" level="project" />
     <orderEntry type="library" name="org.jetbrains.anko:anko:0.10.0@jar" level="project" />
     <orderEntry type="library" name="com.jakewharton:butterknife-annotations:8.6.0@jar" level="project" />
   </component>

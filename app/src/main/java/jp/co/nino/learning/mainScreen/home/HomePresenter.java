@@ -1,5 +1,7 @@
 package jp.co.nino.learning.mainScreen.home;
 
+import android.content.Context;
+
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
@@ -13,6 +15,8 @@ import jp.co.nino.learning.data.DataSource;
 import jp.co.nino.learning.data.api.ApiUrl;
 import jp.co.nino.learning.data.api.model.Genre1;
 import jp.co.nino.learning.data.api.model.RequestParams;
+import jp.co.nino.learning.utils.Constants;
+import jp.co.nino.learning.utils.SharePref;
 import jp.co.nino.learning.utils.UIhelper;
 
 /**
@@ -45,12 +49,22 @@ final public class HomePresenter implements HomeContract.Presenter {
     }
 
     @Override
-    public void setParams() {
-        Calendar cal = Calendar.getInstance(Locale.JAPANESE);
-        RequestParams params = new RequestParams("130", "g1", "0300",
-                UIhelper.parseUnixTimeToString("yyyy-MM-dd", cal.getTimeInMillis()),
-                ApiUrl.API_KEY);
-        mDataRepository.setParams(params);
+    public void setParams(Context context) {
+                Calendar cal = Calendar.getInstance(Locale.JAPANESE);
+        if (SharePref.getString(context, Constants.KEY_PARAM_AREA, "") == "" ||
+                SharePref.getString(context, Constants.KEY_PARAM_GENRE, "") == "") {
+            RequestParams params = new RequestParams("130", "g1", "0300",
+                    UIhelper.parseUnixTimeToString("yyyy-MM-dd", cal.getTimeInMillis()),
+                    ApiUrl.API_KEY);
+            mDataRepository.setParams(params);
+        } else {
+            RequestParams params = new RequestParams(SharePref.getString(context, Constants.KEY_PARAM_AREA, ""),
+                    "g1",
+                    SharePref.getString(context, Constants.KEY_PARAM_GENRE, ""),
+                    UIhelper.parseUnixTimeToString("yyyy-MM-dd", cal.getTimeInMillis()),
+                    ApiUrl.API_KEY);
+            mDataRepository.setParams(params);
+        }
     }
 
     @Override
@@ -74,4 +88,5 @@ final public class HomePresenter implements HomeContract.Presenter {
             }
         });
     }
+
 }

@@ -14,6 +14,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import dagger.android.support.DaggerFragment;
 import jp.co.nino.learning.R;
+import jp.co.nino.learning.utils.Constants;
+import jp.co.nino.learning.utils.SharePref;
 import jp.co.nino.learning.utils.UIhelper;
 
 /**
@@ -62,7 +64,7 @@ public class DashFragment extends DaggerFragment implements DashContract.View {
             public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
                 UIhelper.showMessageBySnackbar(view, item.concat(getResources().getString(R.string.has_been_selected)),
                         getResources().getColor(R.color.colorPrimary), getResources().getColor(R.color.colorMediumPurple));
-
+                SharePref.putString(getContext(), Constants.KEY_PARAM_AREA, item.split(":")[0]);
             }
         });
         area.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
@@ -77,7 +79,7 @@ public class DashFragment extends DaggerFragment implements DashContract.View {
             public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
                 UIhelper.showMessageBySnackbar(view, item.concat(getResources().getString(R.string.has_been_selected)),
                         getResources().getColor(R.color.colorPrimary), getResources().getColor(R.color.colorMediumPurple));
-
+                SharePref.putString(getContext(), Constants.KEY_PARAM_GENRE, item.split(":")[0]);
             }
         });
         genre.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
