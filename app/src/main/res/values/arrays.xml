@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="areas">
+        <item>010:札幌</item>
+        <item>011:函館</item>
+        <item>012:旭川</item>
+        <item>013:帯広</item>
+        <item>014:釧路</item>
+        <item>015:北見</item>
+        <item>016:室蘭</item>
+        <item>020:青森</item>
+        <item>030:盛岡</item>
+        <item>040:仙台</item>
+        <item>050:秋田</item>
+        <item>060:山形</item>
+        <item>070:福島</item>
+        <item>080:水戸</item>
+        <item>090:宇都宮</item>
+        <item>100:前橋</item>
+        <item>110:さいたま</item>
+        <item>120:千葉</item>
+        <item>130:東京</item>
+        <item>140:横浜</item>
+        <item>150:新潟</item>
+        <item>160:富山</item>
+        <item>170:金沢</item>
+        <item>180:福井</item>
+        <item>190:甲府</item>
+        <item>200:長野</item>
+        <item>210:岐阜</item>
+        <item>220:静岡</item>
+        <item>230:名古屋</item>
+        <item>240:津</item>
+        <item>250:大津</item>
+        <item>260:京都</item>
+        <item>270:大阪</item>
+        <item>280:神戸</item>
+        <item>290:奈良</item>
+        <item>300:和歌山</item>
+        <item>310:鳥取</item>
+        <item>320:松江</item>
+        <item>330:岡山</item>
+        <item>340:広島</item>
+        <item>350:山口</item>
+        <item>360:徳島</item>
+        <item>370:高松</item>
+        <item>380:松山</item>
+        <item>390:高知</item>
+        <item>400:福岡</item>
+        <item>401:北九州</item>
+        <item>410:佐賀</item>
+        <item>420:長崎</item>
+        <item>430:熊本</item>
+        <item>440:大分</item>
+        <item>450:宮崎</item>
+        <item>60:鹿児島</item>
+        <item>470:沖縄</item>
+    </string-array>
+
+    <string-array name="genres">
+        <item>0000:ニュース／報道(定時・総合)</item>
+        <item>0100:スポーツ(スポーツニュース)</item>
+        <item>0205:情報／ワイドショー(グルメ・料理)</item>
+        <item>0300:ドラマ(国内ドラマ)</item>
+        <item>0409:音楽(童謡・キッズ)</item>
+        <item>0502:バラエティ(トークバラエティ)</item>
+        <item>0600:映画(洋画)</item>
+        <item>0700:アニメ／特撮(国内アニメ)</item>
+        <item>0800:ドキュメンタリー／教養(社会・時事)</item>
+        <item>0903:劇場／公演(落語・演芸)</item>
+        <item>1000:趣味／教育(旅・釣り・アウトドア)</item>
+        <item>1100:福祉(高齢者)"</item>
+    </string-array>
+
+</resources>

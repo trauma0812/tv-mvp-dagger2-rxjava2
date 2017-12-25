@@ -58,7 +58,7 @@ public class HomeFragment extends DaggerFragment implements HomeContract.View{
         swipeRefreshLayout.setColorSchemeColors(
                 ContextCompat.getColor(getActivity(), R.color.colorYellow),
                 ContextCompat.getColor(getActivity(), R.color.colorAccent),
-                ContextCompat.getColor(getActivity(), R.color.colorRetryBlue)
+                ContextCompat.getColor(getActivity(), R.color.colorSeaBlue)
         );
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -95,14 +95,14 @@ public class HomeFragment extends DaggerFragment implements HomeContract.View{
     @Override
     public void showMessage(String message) {
         UIhelper.showMessageBySnackbar(getView(), message,
-                getResources().getColor(R.color.colorRetryBlue), getResources().getColor(R.color.colorYellow));
+                getResources().getColor(R.color.colorSeaBlue), getResources().getColor(R.color.colorYellow));
 
     }
 
     @Override
     public void showMessage(int resId) {
         UIhelper.showMessageBySnackbar(getView(), getResources().getString(resId),
-                getResources().getColor(R.color.colorRetryBlue), getResources().getColor(R.color.colorYellow));
+                getResources().getColor(R.color.colorSeaBlue), getResources().getColor(R.color.colorYellow));
 
     }
 

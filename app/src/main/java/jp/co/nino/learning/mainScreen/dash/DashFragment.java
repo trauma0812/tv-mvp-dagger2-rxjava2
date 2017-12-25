@@ -6,16 +6,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jaredrummler.materialspinner.MaterialSpinner;
+
 import javax.inject.Inject;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import dagger.android.support.DaggerFragment;
 import jp.co.nino.learning.R;
+import jp.co.nino.learning.utils.UIhelper;
 
 /**
  * Created by liu.rui on 2017/12/13.
  */
 
 public class DashFragment extends DaggerFragment implements DashContract.View {
+
+    @BindView(R.id.tv_area)
+    MaterialSpinner area;
+
+    @BindView(R.id.tv_genre)
+    MaterialSpinner genre;
 
     @Inject
     DashContract.Presenter mPresenter;
@@ -35,16 +46,50 @@ public class DashFragment extends DaggerFragment implements DashContract.View {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.dash_frag, container, false);
-
+        ButterKnife.bind(this, root);
 
         setHasOptionsMenu(true);
+        setSpinner();
 
         return root;
     }
 
     @Override
-    public void showMessage(String message) {
-//        Snackbar.make(getView(), message, Snackbar.LENGTH_LONG).show();
+    public void setSpinner () {
+        area.setItems(getResources().getStringArray(R.array.areas));
+        area.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+            @Override
+            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                UIhelper.showMessageBySnackbar(view, item.concat(getResources().getString(R.string.has_been_selected)),
+                        getResources().getColor(R.color.colorPrimary), getResources().getColor(R.color.colorMediumPurple));
+
+            }
+        });
+        area.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
+            @Override
+            public void onNothingSelected(MaterialSpinner spinner) {
+                //
+            }
+        });
+        genre.setItems(getResources().getStringArray(R.array.genres));
+        genre.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+            @Override
+            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                UIhelper.showMessageBySnackbar(view, item.concat(getResources().getString(R.string.has_been_selected)),
+                        getResources().getColor(R.color.colorPrimary), getResources().getColor(R.color.colorMediumPurple));
+
+            }
+        });
+        genre.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
+            @Override
+            public void onNothingSelected(MaterialSpinner spinner) {
+                //
+            }
+        });
+    }
+
+    @Override
+    public void showMessage(int resId) {
     }
 
     @Override

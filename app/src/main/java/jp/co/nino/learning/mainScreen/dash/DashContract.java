@@ -11,7 +11,9 @@ public interface DashContract {
 
     interface View extends BaseView<Presenter> {
 
-        void showMessage(String message);
+        void showMessage(int resId);
+
+        void setSpinner();
 
     }
 

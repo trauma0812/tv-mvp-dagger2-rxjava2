@@ -8,5 +8,8 @@
     <string name="add_todo">add todo</string>
 
     <string name="entry_message">いらっしゃいませ〜わがテレビ番組表アプリへ☆o</string>
+    <string name="tv_area_label">エリア</string>
+    <string name="tv_genre_label">ジャンル</string>
+    <string name="has_been_selected">が選択されました〜</string>
 
 </resources>

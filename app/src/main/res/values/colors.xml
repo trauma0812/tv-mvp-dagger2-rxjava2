@@ -7,7 +7,11 @@
     <color name="colorYellow">#FFF8E71C</color>
     <color name="colorDefaultWhite">#FFFFFFFF</color>
     <color name="colorErrorRed">#FFFF4433</color>
-    <color name="colorRetryBlue">#FF33A3FF</color>
-    <color name="colorDefaultGreen">#FF009688</color>
+    <color name="colorSeaBlue">#FF33A3FF</color>
+    <color name="colorDefaultGreen">#FFC5E26D</color>
+    <color name="colorMediumSlateBlue">#FF7B68EE</color>
+    <color name="colorMediumPurple">#FFDDBCEE</color>
+    <color name="colorPink">#FFC0CB</color>
+    <color name="colorLavenderBlush">#FFF0F5</color>
 
 </resources>

@@ -20,7 +20,7 @@ final public class DashPresenter implements DashContract.Presenter {
     @Override
     public void takeView(DashContract.View view) {
         this.mMainView = view;
-        mMainView.showMessage("This is Main Screen!!!");
+        mMainView.setSpinner();
     }
 
     @Override
