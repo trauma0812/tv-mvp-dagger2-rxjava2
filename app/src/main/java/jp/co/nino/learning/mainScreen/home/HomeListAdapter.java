@@ -1,4 +1,4 @@
-package jp.co.nino.learning.ui;
+package jp.co.nino.learning.mainScreen.home;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -49,6 +49,8 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.MyView
 //        view.setOnClickListener(MainActivity.myOnClickListener);
 
         MyViewHolder myViewHolder = new MyViewHolder(view);
+        int height = parent.getMeasuredHeight() / 4;
+        view.setMinimumHeight(height);
         return myViewHolder;
     }
 

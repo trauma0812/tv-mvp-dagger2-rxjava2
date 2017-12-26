@@ -18,106 +18,143 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:padding="5dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tv_title_label"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorErrorRed"/>
 
                 <TextView
                     android:id="@+id/main_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
                     android:text="Title"
                     android:textSize="18sp"
-                    android:textColor="@color/colorSeaBlue"
-                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+                    android:textColor="@color/colorSeaBlue"/>
 
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:padding="5dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tv_subtitle_label"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorErrorRed"/>
 
                 <TextView
                     android:id="@+id/subtitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
                     android:text="Subtitle"
                     android:textSize="18sp"
-                    android:textColor="@color/colorSeaBlue"
-                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+                    android:textColor="@color/colorSeaBlue"/>
 
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:padding="5dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tv_act_label"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorErrorRed"/>
 
                 <TextView
                     android:id="@+id/act"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
                     android:text="Act"
                     android:textSize="18sp"
-                    android:textColor="@color/colorSeaBlue"
-                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+                    android:textColor="@color/colorSeaBlue"/>
 
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:padding="5dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tv_on_air_time_label"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorErrorRed"/>
 
                 <TextView
                     android:id="@+id/on_air_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
                     android:text="On_air_time"
                     android:textSize="18sp"
-                    android:textColor="@color/colorSeaBlue"
-                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+                    android:textColor="@color/colorSeaBlue"/>
 
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:padding="5dp"
-                android:layout_marginBottom="12dp"
-                android:orientation="horizontal">
+                android:layout_margin="10dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/tv_content_label"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorErrorRed"/>
 
                 <TextView
                     android:id="@+id/content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="10dp"
                     android:text="Content"
                     android:textSize="18sp"
-                    android:textColor="@color/colorSeaBlue"
-                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+                    android:textColor="@color/colorSeaBlue"/>
 
             </LinearLayout>
 

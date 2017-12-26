@@ -22,7 +22,7 @@ public interface HomeContract {
 
         void showMessage(int resId);
 
-        void setMainContent(List<Genre1> genre1s);
+        void setHomeListData(List<Genre1> genre1s);
 
     }
 

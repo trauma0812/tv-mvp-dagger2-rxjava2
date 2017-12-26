@@ -22,7 +22,6 @@ import dagger.android.support.DaggerFragment;
 import jp.co.nino.learning.R;
 import jp.co.nino.learning.data.api.model.Genre1;
 import jp.co.nino.learning.mainScreen.ScrollChildSwipeRefreshLayout;
-import jp.co.nino.learning.ui.HomeListAdapter;
 import jp.co.nino.learning.utils.NetworkUtils;
 import jp.co.nino.learning.utils.UIhelper;
 
@@ -78,6 +77,14 @@ public class HomeFragment extends DaggerFragment implements HomeContract.View{
             }
         });
 
+        // set recyclerView layout
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        // item padding setting
+        recyclerView.addItemDecoration(HomeListItemDecoration.createDefaultDecoration(getContext()));
+
         setHasOptionsMenu(true);
 
         return root;
@@ -118,11 +125,7 @@ public class HomeFragment extends DaggerFragment implements HomeContract.View{
     }
 
     @Override
-    public void setMainContent(List<Genre1> genre1s) {
-        recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+    public void setHomeListData(List<Genre1> genre1s) {
         adapter = new HomeListAdapter(genre1s);
         recyclerView.setAdapter(adapter);
     }

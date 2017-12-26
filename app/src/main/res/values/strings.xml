@@ -13,5 +13,11 @@
     <string name="tv_area_label">エリア</string>
     <string name="tv_genre_label">ジャンル</string>
     <string name="has_been_selected">が選択されました〜</string>
+    <string name="tv_title_label">タイトル</string>
+    <string name="tv_subtitle_label">サブタイトル</string>
+    <string name="tv_act_label">出演者</string>
+    <string name="tv_on_air_time_label">放送時間</string>
+    <string name="tv_content_label">あらすじ</string>
+
 
 </resources>

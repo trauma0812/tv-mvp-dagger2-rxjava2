@@ -72,7 +72,7 @@ final public class HomePresenter implements HomeContract.Presenter {
         mDataRepository.getTvProgram(new DataSource.GetTvProgramCallback() {
             @Override
             public void onLoaded(List<Genre1> genre1s) {
-                mMainView.setMainContent(genre1s);
+                mMainView.setHomeListData(genre1s);
                 mMainView.setLoadingIndicator(false);
             }
 
