@@ -54,6 +54,10 @@ public class RemoteDataSource implements DataSource {
                     @Override
                     public void onNext(ProgramList programList) {
                         Log.d(TAG, programList.toString());
+                        if (programList.getList() == null) {
+                            callback.onErrors("No tv program result.");
+                            return;
+                        }
                         callback.onLoaded(programList.getList().getG1());
                     }
 
